@@ -123,8 +123,8 @@ export default function Services() {
         <div className="text-center mb-12 md:mb-16">
           {/*<h2 className="mx-auto max-w-[320px] md:max-w-4xl text-[30px] sm:text-[34px] md:text-4xl font-bold tracking-[-0.03em] text-white leading-[1.28] md:leading-[1.25] break-keep">*/}
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white leading-snug break-keep">
-            CREW AI의{" "}
-            <br className="hidden md:block" />
+            CREW AI의
+            <br/>
             세 가지 리스크 차단 전략
           </h2>
           {/*<h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white leading-snug break-keep">*/}

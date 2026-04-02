@@ -12,8 +12,8 @@ export default function System() {
           </div>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-tx-primary mb-4 md:mb-5 leading-snug break-keep">
             {/*데이터부터 운영까지,<br />하나의 흐름으로 연결됩니다*/}
-            데이터부터 운영까지,{" "}
-            <br className="hidden md:block" />
+            데이터부터 운영까지,
+            <br/>
             끊김 없는 연결
           </h2>
           <div
@@ -102,7 +102,7 @@ export default function System() {
             <p className="text-sm text-tx-secondary leading-relaxed break-keep mb-6">데이터는 자동으로 연결되고, 따로 관리할 필요가 없습니다. 모든 정보가 하나의 흐름으로 이어집니다.</p>
             {/* pipeline visual */}
             <div className="bg-slate-50/50 rounded-xl p-5 mb-6 border border-slate-100 relative overflow-hidden">
-              <div className="flex items-center justify-between relative">
+              <div className="grid grid-cols-4 items-center relative gap-3">
                 <div className="absolute left-6 right-6 top-1/2 h-px bg-slate-300 -translate-y-1/2" />
                 <div className="absolute left-6 right-6 top-1/2 h-px -translate-y-1/2 overflow-hidden">
                   <div className="w-full h-full animate-stream" style={{ background: 'linear-gradient(90deg,transparent,#0066FF,transparent)' }} />
@@ -115,9 +115,9 @@ export default function System() {
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="w-10 h-10 rounded-xl shadow-sm border flex items-center justify-center z-10"
+                    className="w-10 h-10 rounded-xl shadow-sm border flex items-center justify-center justify-self-center z-10"
                     style={{
-                      background: item.primary ? '#0066FF' : item.blue ? 'rgba(0,102,255,.05)' : '#fff',
+                      background: item.primary ? '#0066FF' : item.blue ? '#EDF5FF' : '#fff',
                       borderColor: item.primary ? '#0066FF' : '#E2E8F0',
                       color: item.primary ? '#fff' : item.blue ? '#0066FF' : '#0B192C',
                     }}
@@ -126,9 +126,15 @@ export default function System() {
                   </div>
                 ))}
               </div>
-              <div className="flex justify-between mt-2 px-1">
+              <div className="grid grid-cols-4 mt-2 gap-3">
                 {['WEARABLE', 'APP', 'CLOUD', 'AI MODEL'].map((label, i) => (
-                  <span key={label} className="text-[9px] font-mono" style={{ color: i >= 2 ? '#0066FF' : '#94A3B8', fontWeight: i >= 2 ? 700 : 400 }}>{label}</span>
+                  <span
+                    key={label}
+                    className="text-[9px] font-mono text-center"
+                    style={{ color: i >= 2 ? '#0066FF' : '#94A3B8', fontWeight: i >= 2 ? 700 : 400 }}
+                  >
+                    {label}
+                  </span>
                 ))}
               </div>
             </div>

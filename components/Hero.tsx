@@ -22,7 +22,7 @@ export default function Hero() {
 
   return (
     <section
-      className="min-h-screen flex items-center justify-center relative overflow-hidden grid-bg-light"
+      className="min-h-screen flex items-center justify-center relative grid-bg-light pb-16 md:pb-24"
       style={{ paddingTop: 72 }}
     >
       {/* ambient glow */}
@@ -110,7 +110,7 @@ export default function Hero() {
         <div className="relative h-[460px] sm:h-[520px] lg:h-[580px]" style={{ perspective: 1000 }}>
           <div
             ref={dashRef}
-            className="absolute inset-0 rounded-2xl overflow-hidden bg-white border border-white/60"
+            className="absolute inset-0 rounded-2xl bg-white border border-white/60"
             style={{
               boxShadow: '0 20px 40px -10px rgba(11,25,44,.12)',
               transform: 'rotateY(-5deg) rotateX(2deg)',
@@ -118,7 +118,10 @@ export default function Hero() {
             }}
           >
             {/* header */}
-            <div className="flex justify-between items-center px-4 md:px-6 py-3 md:py-4 text-white" style={{ background: '#0B192C' }}>
+            <div
+              className="flex justify-between items-center px-4 md:px-6 py-3 md:py-4 text-white rounded-tl-2xl rounded-tr-2xl"
+              style={{ background: '#0B192C' }}
+            >
               <div className="flex items-center gap-2 md:gap-3 min-w-0">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
                   <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
@@ -136,7 +139,7 @@ export default function Hero() {
 
             {/* body */}
             <div
-              className="p-3 sm:p-4 md:p-5 grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 overflow-auto"
+              className="p-3 sm:p-4 md:p-5 grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 overflow-auto rounded-2xl"
               style={{ background: 'linear-gradient(180deg,#fff 0%,#F1F5F9 100%)' }}
             >
               {/* flight route */}
